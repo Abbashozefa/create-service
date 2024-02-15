@@ -10,7 +10,7 @@ To create docker images of the services that print their own name
 Clone the project
 
 ```bash
-  git clone https://Abbashozefa/create-service
+  git clone https://github.com/Abbashozefa/create-service
 ```
 
 Go to the project directory
