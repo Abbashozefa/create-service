@@ -1,4 +1,3 @@
-
 # Create Service Images
 
 To create docker images of the services that print their own name
@@ -44,25 +43,47 @@ push image dockerhub repo
 
 #Creating Helm Charts 
 
+Start a local Kubernetes cluster
 ```bash
-->minikube start
+minikube start
 ```
 
-->helm create <chart_name> 
+Create a new Helm Chart
+```bash
+helm create <chart_name>
+```
+
+Change in created directory
+```bash
 Go to values.yaml and change the following:
 1.image: repository : dsa/nokia
 2.tag:"latest"
 3.service: port:5000
+```
 
-->helm install <some_user_name> <chart_name>
+Install new package
+```bash
+helm install <some_user_name> <chart_name>
+```
 
-->helm package <chart_name>
+Install Helm package
+```bash
+helm package <chart_name>
+```
 
-->kubectl get pods
-Copy the NAME
+To see the status of the Kubernetes pods deployed 
+```bash
+kubectl get pods
+```
 
-->kubectl port-forward <copied_NAME_from_previous_step> 8080:5000
+Forward network traffic from a local port on your computer to a port on a Kubernetes Pod
+```bash
+kubectl port-forward <copied_NAME_from_previous_step> 8080:5000
+```
 
+Push the chart to Docker Hub
+```bash
 ->helm push <name_of_tarball.tgz> oci://registry-1.docker.io/dsanokia
+```
 
 
