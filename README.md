@@ -44,7 +44,9 @@ push image dockerhub repo
 
 #Creating Helm Charts 
 
+```bash
 ->minikube start
+```
 
 ->helm create <chart_name> 
 Go to values.yaml and change the following:
