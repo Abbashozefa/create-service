@@ -86,13 +86,15 @@ helm push <name_of_tarball.tgz> oci://registry-1.docker.io/dsanokia
 
 Run "python -m pip install pyyaml" in your project directory terminal
 
-Run 'update_yaml.py' file, localhost:portnumber will be opened 
+Run 'update_yaml.py' file, "http://127.0.0.1:5000/" will be opened 
 
 Open PostMan
 
 Create a new HTTP request page
 
 Select POST from the drop down
+
+Give the URL in which your Flask application is running "http://127.0.0.1:5000/update_replica"
 
 In Headers: Key: Content_Type and Value:application/json 
 
