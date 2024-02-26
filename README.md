@@ -83,7 +83,38 @@ kubectl port-forward <copied_NAME_from_previous_step> 8080:5000
 
 Push the chart to Docker Hub
 ```bash
-->helm push <name_of_tarball.tgz> oci://registry-1.docker.io/dsanokia
+helm push <name_of_tarball.tgz> oci://registry-1.docker.io/dsanokia
 ```
+
+#To Update the ReplicaCount based on the HTTP request
+
+Run "python -m pip install pyyaml" in your project directory terminal
+
+Run 'update_yaml.py' file, localhost:portnumber will be opened 
+
+Open PostMan
+
+Create a new HTTP request page
+
+Select POST from the drop down
+
+In Headers: Key: Content_Type and Value:application/json 
+
+In Body: select "raw"
+Type the below code:
+{
+  "replica_number": 4
+}
+
+Click on SEND
+
+If the POST method is succesfull, it will display "Replica number updated successfully", else there is an error
+
+Check in project terminal:
+->minikube start
+->helm install <username> <chartname>
+->helm upgrade <username> <chartname>
+->kubectl get pods (Updated pods will be Running) 
+
 
 
