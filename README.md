@@ -86,7 +86,7 @@ Push the chart to Docker Hub
 helm push <name_of_tarball.tgz> oci://registry-1.docker.io/dsanokia
 ```
 
-#To Update the ReplicaCount based on the HTTP request
+## To Update the ReplicaCount based on the HTTP request
 
 Run "python -m pip install pyyaml" in your project directory terminal
 
