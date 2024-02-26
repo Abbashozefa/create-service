@@ -1,10 +1,6 @@
-# Create Service Images
+# STEPS
 
-To create docker images of the services that print their own name
-
-
-
-## Run 
+## To create Docker images of the services that print their own name
 
 Clone the project
 
@@ -41,7 +37,7 @@ push image dockerhub repo
   docker push dsanokia/<servicenamewithoutunderscore>
 ```
 
-#Creating Helm Charts 
+## Creating Helm Charts 
 
 Start a local Kubernetes cluster
 ```bash
