@@ -56,7 +56,7 @@ helm create <chart_name>
 Change in created directory
 ```bash
 Go to values.yaml and change the following:
-1.image: repository : dsa/nokia
+1.image: repository : dsanokia/<image_name>
 2.tag:"latest"
 3.service: port:5000
 ```
